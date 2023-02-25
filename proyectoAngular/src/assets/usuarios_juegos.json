@@ -1,0 +1,77 @@
+{
+  "usuarios": [
+    {
+      "id": "Adamuz",
+      "nombre": "14430",
+      "apellidos": 2,
+      "direccion":"" ,
+      "rol":""
+    },
+    {
+      "id": "Adamuz",
+      "nombre": "14430",
+      "apellidos": 2,
+      "direccion":"" ,
+      "rol":""
+    },
+    {
+      "id": "Adamuz",
+      "nombre": "14430",
+      "apellidos": 2,
+      "direccion":"" ,
+      "rol":""
+    },
+    {
+      "id": "Adamuz",
+      "nombre": "14430",
+      "apellidos": 2,
+      "direccion":"" ,
+      "rol":""
+    },
+    {
+      "id": "Adamuz",
+      "nombre": "14430",
+      "apellidos": 2,
+      "direccion":"" ,
+      "rol":""
+    }
+  ],
+  "juegos": [
+    {
+      "id": "Antequera",
+      "portada": "29200",
+      "nombre": 1,
+      "descripcion":""
+    },
+    {
+      "id": "Antequera",
+      "portada": "29200",
+      "nombre": 1,
+      "descripcion":""
+    },
+    {
+      "id": "Antequera",
+      "portada": "29200",
+      "nombre": 1,
+      "descripcion":""
+    },
+    {
+      "id": "Antequera",
+      "portada": "29200",
+      "nombre": 1,
+      "descripcion":""
+    },
+    {
+      "id": "Antequera",
+      "portada": "29200",
+      "nombre": 1,
+      "descripcion":""
+    },
+    {
+      "id": "Antequera",
+      "portada": "29200",
+      "nombre": 1,
+      "descripcion":""
+    }
+  ]
+}
