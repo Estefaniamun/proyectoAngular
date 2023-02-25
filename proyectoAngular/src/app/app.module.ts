@@ -9,16 +9,20 @@ import { PrincipalComponent } from './componentes/principal/principal.component'
 import { PieComponent } from './componentes/pie/pie.component';
 import { RouterModule, Routes } from '@angular/router';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { ListarCiudadesComponent } from './componentes/listar-ciudades/listar-ciudades.component';
-import { CrearCiudadesComponent } from './componentes/crear-ciudades/crear-ciudades.component';
 import {MatFormFieldModule} from '@angular/material/form-field'; 
 import {MatButtonModule} from '@angular/material/button'; 
 
 import {MatIconModule} from '@angular/material/icon'; 
-import {MatMenuModule} from '@angular/material/menu'; 
+import {MatMenuModule} from '@angular/material/menu';
+import { ListarJuegosComponent } from './componentes/listar-juegos/listar-juegos.component';
+import { EditarJuegosComponent } from './componentes/editar-juegos/editar-juegos.component';
+import { CrearJuegosComponent } from './componentes/crear-juegos/crear-juegos.component';
+import { BorrarJuegosComponent } from './componentes/borrar-juegos/borrar-juegos.component'; 
 const appRoutes: Routes = [
-  { path: 'listarCiudades', component: ListarCiudadesComponent },
-  { path: 'crearCiudades', component: CrearCiudadesComponent },
+  { path: 'listarJuegos', component: ListarJuegosComponent },
+  { path: 'crearJuegos', component: CrearJuegosComponent },
+  {path: 'editarJuegos', component: EditarJuegosComponent},
+  {path: 'borrarJuegos', component: BorrarJuegosComponent},
   {path: 'principal', component: PrincipalComponent},
   { path: '', redirectTo: '/principal', pathMatch: 'full' },
   { path: '**', component: PrincipalComponent }
@@ -30,8 +34,10 @@ const appRoutes: Routes = [
     CabeceraComponent,
     PrincipalComponent,
     PieComponent,
-    CrearCiudadesComponent,
-    ListarCiudadesComponent,
+    ListarJuegosComponent,
+    EditarJuegosComponent,
+    CrearJuegosComponent,
+    BorrarJuegosComponent,
   ],
   imports: [
     BrowserModule,

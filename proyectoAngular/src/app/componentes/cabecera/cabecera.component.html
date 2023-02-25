@@ -1,27 +1,27 @@
 <!--Cabecera en formato de angular material con enlaces a los path de los Routers-->
 <mat-toolbar color="primary" class="cabecera">
-  <ul id="iconoHome">
-    <a routerLink="principal">
-      <button mat-icon-button color="basic">
-        <mat-icon>home</mat-icon>
+  <ul >
+    <li id="iconoHome">
+      <a routerLink="principal">
+        <button mat-icon-button color="basic">
+          <mat-icon>home</mat-icon>
+        </button>
+      </a>
+    </li>
+    <li><a routerLink="listarJuegos">Listar Juegos</a></li>
+    <li><a routerLink="crearJuegos">Crear Juegos</a></li>
+    <li><a routerLink="editarJuegos">Editar Juegos</a></li>
+    <li><a routerLink="borrarJuegos">Borrar Juegos</a></li>
+    <li id="iconoMenu">
+      <button mat-button [matMenuTriggerFor]="menu">
+        <button mat-icon-button color="basic">
+          <mat-icon>menu</mat-icon>
+        </button>
       </button>
-    </a>
-  </ul>
-  <ul>
-    <a routerLink="listarCiudades">Listar</a>
-  </ul>
-  <ul>
-    <a routerLink="crearCiudades">Crear </a>
-  </ul>
-  <ul id="iconoMenu">
-    <button mat-button [matMenuTriggerFor]="menu">
-      <button mat-icon-button color="basic">
-        <mat-icon>menu</mat-icon>
-      </button>
-    </button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>Listado de Alumnos</button>
-      <button mat-menu-item>Insertar Alumnado</button>
-    </mat-menu>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Login</button>
+        <button mat-menu-item>LogOut</button>
+      </mat-menu>
+    </li>
   </ul>
 </mat-toolbar>

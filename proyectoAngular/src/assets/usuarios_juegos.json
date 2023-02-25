@@ -1,77 +1,71 @@
 {
   "usuarios": [
     {
-      "id": "Adamuz",
-      "nombre": "14430",
-      "apellidos": 2,
-      "direccion":"" ,
-      "rol":""
+      "id": 1,
+      "nombre": "estefania",
+      "apellidos": "muñoz calzado",
+      "direccion":"C/Arévalo Nº30" ,
+      "rol":"admin"
     },
     {
-      "id": "Adamuz",
-      "nombre": "14430",
-      "apellidos": 2,
-      "direccion":"" ,
-      "rol":"aa"
+      "id": 2,
+      "nombre": "jesus",
+      "apellidos": "morales cañete",
+      "direccion":"C/Alta Nº2" ,
+      "rol":"usuario"
     },
     {
-      "id": "Adamuz",
-      "nombre": "14430",
-      "apellidos": 2,
-      "direccion":"" ,
-      "rol":""
+      "id": 3,
+      "nombre": "juanjo",
+      "apellidos": "cantero marín",
+      "direccion":"C/Baja Nº20" ,
+      "rol":"usuario"
     },
     {
-      "id": "Adamuz",
-      "nombre": "14430",
-      "apellidos": 2,
-      "direccion":"" ,
-      "rol":""
-    },
-    {
-      "id": "Adamuz",
-      "nombre": "14430",
-      "apellidos": 2,
-      "direccion":"" ,
-      "rol":""
+      "id": 4,
+      "nombre": "andrea",
+      "apellidos": "gayoso requerey",
+      "direccion":"C/Juan Blázquez Nº10 2ºD" ,
+      "rol":"usuario"
     }
+    
   ],
   "juegos": [
     {
-      "id": "Antequera",
-      "portada": "29200",
-      "nombre": 1,
-      "descripcion":""
+      "id": 1,
+      "portada": "https://es.wikipedia.org/wiki/Los_Sims_4#/media/Archivo:Logo_de_Los_Sims_4.png",
+      "nombre": "Los Sims 4",
+      "descripcion":"es un videojuego de simulación social y de vida, el cuarto de la serie de juegos de Los Sims, desarrollado por Maxis y publicado por Electronic Arts."
     },
     {
-      "id": "Antequera",
-      "portada": "29200",
-      "nombre": 1,
-      "descripcion":""
+      "id": 2,
+      "portada": "https://uncharted.fandom.com/es/wiki/Uncharted_4:_El_desenlace_del_ladr%C3%B3n?file=Uncharted_4_portada.jpeg",
+      "nombre": "Uncharted 4: El desenlace del ladrón",
+      "descripcion":" es un videojuego de acción-aventura en tercera persona, lanzado el 10 de mayo de 2016, distribuido por Sony Computer Entertainment y desarrollado por Naughty Dog exclusivamente para PlayStation 4.1​ Es la secuela de Uncharted 3: La traición de Drake, y la cuarta entrega de la serie Uncharted."
     },
     {
-      "id": "Antequera",
-      "portada": "29200",
-      "nombre": 1,
-      "descripcion":""
+      "id": 3,
+      "portada": "https://assassinscreed.fandom.com/es/wiki/Assassin%27s_Creed:_Origins?file=Assassin%2527s_Creed_Origins_Caratula.jpg",
+      "nombre": "Assassin's Creed Origins",
+      "descripcion":"es un videojuego de acción-aventura y RPG de la saga Assassin's Creed cuya fecha de lanzamiento fue el 27 de octubre de 2017.1​2​3​ Está disponible para las plataformas PlayStation 4, Xbox One, Stadia, Luna y PC.4."
     },
     {
-      "id": "Antequera",
-      "portada": "29200",
-      "nombre": 1,
-      "descripcion":""
+      "id": 4,
+      "portada": "https://lifeisstrange.fandom.com/es/wiki/Life_Is_Strange:_Before_the_Storm?file=Life_is_Strange_Before_the_Storm.jpg",
+      "nombre": "Life is Strange: Before the storm",
+      "descripcion":"es un juego de aventura gráfica dividida en tres episodios desarrollado por Deck Nine Games y publicada por Square Enix."
     },
     {
-      "id": "Antequera",
-      "portada": "29200",
-      "nombre": 1,
-      "descripcion":""
+      "id": 5,
+      "portada": "https://uvejuegos.com/verCaratulasJuego.jsp?idJuego=61662",
+      "nombre": "Animal Crossing New Horizons",
+      "descripcion":" es un videojuego de simulación social y de vida que Nintendo ha descrito como un «juego de comunicación». El personaje vive una vida en la que el usuario decide qué hacer, como cumplir las tareas propuestas por los vecinos."
     },
     {
-      "id": "Antequera",
-      "portada": "29200",
-      "nombre": 1,
-      "descripcion":""
+      "id": 6,
+      "portada": "https://thelastofus.fandom.com/es/wiki/The_Last_of_Us?file=Portada_Parte_I_limpia.jpeg",
+      "nombre": "The Last Of Us",
+      "descripcion":"es un videojuego de terror, acción y aventura desarrollado por la compañía estadounidense Naughty Dog y distribuido por Sony Computer Entertainment para la consola PlayStation 3 en 2013. La trama describe las vivencias de Joel y Ellie, un par de supervivientes de una pandemia en Estados Unidos que provoca la mutación de los seres humanos en criaturas caníbales."
     }
   ]
 }
