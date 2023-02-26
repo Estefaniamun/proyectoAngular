@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -9,11 +11,13 @@ import { PrincipalComponent } from './componentes/principal/principal.component'
 import { PieComponent } from './componentes/pie/pie.component';
 import { RouterModule, Routes } from '@angular/router';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatFormFieldModule} from '@angular/material/form-field'; 
 import {MatButtonModule} from '@angular/material/button'; 
-
+import {MatCardModule} from '@angular/material/card'; 
 import {MatIconModule} from '@angular/material/icon'; 
 import {MatMenuModule} from '@angular/material/menu';
+import {FormsModule} from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+
 import { ListarJuegosComponent } from './componentes/listar-juegos/listar-juegos.component';
 import { EditarJuegosComponent } from './componentes/editar-juegos/editar-juegos.component';
 import { CrearJuegosComponent } from './componentes/crear-juegos/crear-juegos.component';
@@ -49,7 +53,10 @@ const appRoutes: Routes = [
     MatButtonModule,
     MatIconModule,
     MatMenuModule,
-    MatFormFieldModule
+    MatCardModule,
+    HttpClientModule,
+    FormsModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

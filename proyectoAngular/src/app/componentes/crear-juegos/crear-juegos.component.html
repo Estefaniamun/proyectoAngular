@@ -1,1 +1,44 @@
-<p>crear-juegos works!</p>
+<div class="container">
+  <form class="form item" #crearForm="ngForm">
+    <mat-form-field class="form__element">
+      <input
+        matInput
+        placeholder="id"
+        [(ngModel)]="model.id"
+        name="id"
+        #id="ngModel"
+      />
+    </mat-form-field>
+    <mat-form-field class="form__element">
+      <input
+        matInput
+        placeholder="nombre"
+        [(ngModel)]="model.nombre"
+        name="nombre"
+        #nombre="ngModel"
+      />
+      <mat-error *ngIf="nombre.valid"> Nombre es requerido </mat-error>
+    </mat-form-field>
+    <div class="form__element" MatFormFieldControl>
+      <input type="file"
+      MatNativeControl
+        placeholder="portada"
+        [(ngModel)]="model.portada"
+        name="portada"
+        #portada="ngModel"
+      />
+    </div>
+    <mat-form-field class="form__element">
+      <textarea
+        matInput
+        placeholder="descripcion"
+        [(ngModel)]="model.descripcion"
+        name="descripcion"
+        #descripcion="ngModel"
+      ></textarea>
+    </mat-form-field>
+    <button [disabled]="" mat-raised-button color="primary" type="submit" (click)="onSubmit(crearForm)">Crear</button>
+  </form>
+</div>
+
+

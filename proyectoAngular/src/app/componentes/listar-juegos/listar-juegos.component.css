@@ -1,0 +1,8 @@
+.container{
+    min-height: calc(100vh - 50px - 100px);
+}
+mat-card{
+    background-color: blueviolet;
+    margin: 30px;
+   
+}

@@ -1,3 +1,5 @@
+import { ListarJuegosService } from './../../servicios/listar-juegos.service';
+import { Juego } from './../../interfaces/juego';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./listar-juegos.component.css']
 })
 export class ListarJuegosComponent {
+  juego: Juego[] = [];
 
+
+  constructor(private listarjuegos: ListarJuegosService) {
+
+  }
+
+  ngOnInit(): void {
+    this.listarjuegos.listarJuegos().subscribe(juego => { (this.juego = juego); console.log(juego) });
+  }
 }
