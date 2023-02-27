@@ -1,1 +1,22 @@
-<p>editar-juegos works!</p>
+<div class="container">
+    <form class="form item" #editarform="ngForm" (ngSubmit)="editar(editarform)">
+      <mat-form-field class="form__element">
+        <input
+          matInput
+          placeholder="nombre"
+          name="nombre"
+          value="{{juego.nombre}}"
+        />
+      </mat-form-field>
+      <mat-form-field class="form__element">
+        <label for="descripcion">Descripcion</label>
+        <textarea
+          matInput
+          placeholder="descripcion"
+          name="descripcion"
+          id="descripcion">
+        {{juego.descripcion}}</textarea>
+      </mat-form-field>
+      <button [disabled]="" mat-raised-button color="primary" type="submit"  routerLink="/listarJuegos">Editar</button>
+    </form>
+  </div>

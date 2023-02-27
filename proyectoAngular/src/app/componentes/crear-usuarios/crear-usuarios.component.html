@@ -1,0 +1,52 @@
+<div class="container">
+    <form class="form item" #crearFormUsuario="ngForm">
+      <mat-form-field class="form__element">
+        <input
+          matInput
+          placeholder="id"
+          [(ngModel)]="model.id"
+          name="id"
+          #id="ngModel"
+        />
+      </mat-form-field>
+      <mat-form-field class="form__element">
+        <input
+          matInput
+          placeholder="nombre"
+          [(ngModel)]="model.nombre"
+          name="nombre"
+          #nombre="ngModel"
+        />
+    </mat-form-field>
+        <mat-error *ngIf="nombre.valid"> Nombre es requerido </mat-error>
+        <mat-form-field class="form__element">
+            <input
+              matInput
+              placeholder="apellidos"
+              [(ngModel)]="model.apellidos"
+              name="apellidos"
+              #apellidos="ngModel"
+            />
+        </mat-form-field>
+            <mat-form-field class="form__element">
+                <input
+                  matInput
+                  placeholder="direccion"
+                  [(ngModel)]="model.direccion"
+                  name="direccion"
+                  #direccion="ngModel"
+                />
+            </mat-form-field>
+                <mat-form-field class="form__element">
+                    <input
+                      matInput
+                      placeholder="rol"
+                      [(ngModel)]="model.rol"
+                      name="rol"
+                      #rol="ngModel"
+                    />
+                </mat-form-field>
+      <button [disabled]="" mat-raised-button color="primary" type="submit" (click)="onSubmit(crearFormUsuario)" routerLink="/listarUsuarios">Crear</button>
+     </form>
+  
+  </div>

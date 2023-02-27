@@ -1,0 +1,25 @@
+<div class="container">
+    <button mat-raised-button color="primary">Recargar</button>
+  <mat-card *ngFor="let u of usuario">
+      <mat-card-header>
+        <mat-card-title>{{u.nombre}}, {{u.apellidos}}</mat-card-title>
+        <mat-card-subtitle>ID: {{u.id}}</mat-card-subtitle>
+      </mat-card-header>
+    <mat-card-content>
+      <p>
+        Email:{{u.usuario}}
+      </p>
+      <p>
+      Dirección: {{u.direccion}}
+      </p>
+      <p>
+       Rol: {{u.rol}}
+      </p>
+    </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button>Editar</button>
+        <button mat-raised-button>Borrar</button>
+      </mat-card-actions>
+    </mat-card>
+    <br>
+  </div>

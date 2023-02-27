@@ -21,12 +21,24 @@ import { MatInputModule } from '@angular/material/input';
 import { ListarJuegosComponent } from './componentes/listar-juegos/listar-juegos.component';
 import { EditarJuegosComponent } from './componentes/editar-juegos/editar-juegos.component';
 import { CrearJuegosComponent } from './componentes/crear-juegos/crear-juegos.component';
-import { BorrarJuegosComponent } from './componentes/borrar-juegos/borrar-juegos.component'; 
+import { BorrarJuegosComponent } from './componentes/borrar-juegos/borrar-juegos.component';
+import { ListarUsuariosComponent } from './componentes/listar-usuarios/listar-usuarios.component';
+import { CrearUsuariosComponent } from './componentes/crear-usuarios/crear-usuarios.component';
+import { EditarUsuariosComponent } from './componentes/editar-usuarios/editar-usuarios.component';
+import { BorrarUsuariosComponent } from './componentes/borrar-usuarios/borrar-usuarios.component';
+import { LoginComponent } from './componentes/login/login.component';
+import { LogoutComponent } from './componentes/logout/logout.component';
+import { AuthGuard } from './guards/auth.guard';
+
 const appRoutes: Routes = [
+  {path: 'Login', component: LoginComponent},
+  {path: 'Logout', canActivate:[AuthGuard], component:LogoutComponent},
+  {path: 'listarUsuarios', component: ListarUsuariosComponent},
+  {path: 'crearUsuarios', component: CrearUsuariosComponent},
   { path: 'listarJuegos', component: ListarJuegosComponent },
   { path: 'crearJuegos', component: CrearJuegosComponent },
-  {path: 'editarJuegos', component: EditarJuegosComponent},
-  {path: 'borrarJuegos', component: BorrarJuegosComponent},
+  {path: 'editarJuegos/:id', component: EditarJuegosComponent},
+  {path: 'borrarJuegos/:id', component: BorrarJuegosComponent},
   {path: 'principal', component: PrincipalComponent},
   { path: '', redirectTo: '/principal', pathMatch: 'full' },
   { path: '**', component: PrincipalComponent }
@@ -42,6 +54,12 @@ const appRoutes: Routes = [
     EditarJuegosComponent,
     CrearJuegosComponent,
     BorrarJuegosComponent,
+    ListarUsuariosComponent,
+    CrearUsuariosComponent,
+    EditarUsuariosComponent,
+    BorrarUsuariosComponent,
+    LoginComponent,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,7 +74,8 @@ const appRoutes: Routes = [
     MatCardModule,
     HttpClientModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

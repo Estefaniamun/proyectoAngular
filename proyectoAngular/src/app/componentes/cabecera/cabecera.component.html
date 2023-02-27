@@ -1,6 +1,6 @@
 <!--Cabecera en formato de angular material con enlaces a los path de los Routers-->
 <mat-toolbar color="primary" class="cabecera">
-  <ul >
+  <ul>
     <li id="iconoHome">
       <a routerLink="principal">
         <button mat-icon-button color="basic">
@@ -12,6 +12,8 @@
     <li><a routerLink="crearJuegos">Crear Juegos</a></li>
     <li><a routerLink="editarJuegos">Editar Juegos</a></li>
     <li><a routerLink="borrarJuegos">Borrar Juegos</a></li>
+    <li><a routerLink="Login">Login</a></li>
+    <li><a routerLink="Logout">LogOut</a></li>
     <li id="iconoMenu">
       <button mat-button [matMenuTriggerFor]="menu">
         <button mat-icon-button color="basic">
@@ -19,8 +21,12 @@
         </button>
       </button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item>Login</button>
-        <button mat-menu-item>LogOut</button>
+        <button mat-menu-item>
+          <a routerLink="listarUsuarios">Listar Usuarios</a>
+        </button>
+        <button mat-menu-item>
+          <a routerLink="crearUsuarios">Crear Usuarios</a>
+        </button>
       </mat-menu>
     </li>
   </ul>
