@@ -1,11 +1,11 @@
 <div class="container">
-    <form class="form item" #editarform="ngForm" (ngSubmit)="editar(editarform)">
+    <form class="form item">
       <mat-form-field class="form__element">
         <input
           matInput
           placeholder="nombre"
           name="nombre"
-          value="{{juego.nombre}}"
+         
         />
       </mat-form-field>
       <mat-form-field class="form__element">
@@ -15,8 +15,8 @@
           placeholder="descripcion"
           name="descripcion"
           id="descripcion">
-        {{juego.descripcion}}</textarea>
+        </textarea>
       </mat-form-field>
-      <button [disabled]="" mat-raised-button color="primary" type="submit"  routerLink="/listarJuegos">Editar</button>
+      <button [disabled]="" mat-raised-button color="primary" type="submit" (click)="actualizarJuego(juego)" routerLink="/listarJuegos">Editar</button>
     </form>
   </div>

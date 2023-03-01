@@ -16,12 +16,7 @@ export class ListarJuegosService {
     return this.http.get<Juego[]>(this.apiurl);
   }
 
-  obtenerJuego(url: string): Observable<Juego>{
-    
-
-
-    return this.http.get<Juego>(this.apiurl);
-  }
+  
   
 
   saveJuego(juego:any):Observable<any>{
@@ -30,7 +25,7 @@ export class ListarJuegosService {
 
   updateJuego(juego: Juego): Observable<Juego> {
     const url = `${this.apiurl}/${juego.id}`;
-    return this.http.put<Juego>(url, juego, httpOptions);
+    return this.http.put<Juego>(url, juego);
   }
 
   borrarJuego(idjuego: number): Observable<Juego> {

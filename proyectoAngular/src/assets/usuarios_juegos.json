@@ -35,6 +35,13 @@
       "apellidos": "gayoso requerey",
       "direccion": "C/Juan Blázquez Nº10 2ºD",
       "rol": "usuario"
+    },
+    {
+      "id": "5",
+      "nombre": "prueba",
+      "apellidos": "prueba",
+      "direccion": "prueba",
+      "rol": "usuario"
     }
   ],
   "juegos": [

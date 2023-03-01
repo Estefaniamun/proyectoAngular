@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Juego } from '../interfaces/juego';
 import { Usuario } from '../interfaces/usuario';
 
 @Injectable({
@@ -25,4 +26,5 @@ export class ListarUsuariosService {
     return this.http.post<any>(`${this.apiurl}`, usuario);
   }
 
+  
 }

@@ -9,19 +9,13 @@ import {MatDialog} from '@angular/material/dialog';
 })
 export class BorrarJuegosComponent  implements OnInit{
   juego: Juego[]=[];
-  constructor(public dialog: MatDialog, private borrarjuego:ListarJuegosService){
+  constructor( private borrarjuego:ListarJuegosService){
 
   }
-  openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
-    this.dialog.open(BorrarJuegosComponent, {
-      width: '250px',
-      enterAnimationDuration,
-      exitAnimationDuration,
-    });
+  
+  borrarJuego(idjuego:number){
+   this.borrarjuego.borrarJuego(idjuego).subscribe(()=>{this.juego=this.juego.filter(j=>j.id!==idjuego);console.log(this.juego)});
   }
- // borrarJuego(idjuego:number){
-   // this.borrarjuego.borrarJuego(idjuego).subscribe(()=>this.juego=this.borrarjuego.filter(j=>j.id!==idjuego); console.log(this.juego));
-  //}
   ngOnInit(): void {
    
   }
