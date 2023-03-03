@@ -29,7 +29,8 @@ import { BorrarUsuariosComponent } from './componentes/borrar-usuarios/borrar-us
 import { LoginComponent } from './componentes/login/login.component';
 import { LogoutComponent } from './componentes/logout/logout.component';
 import { AuthGuard } from './guards/auth.guard';
-
+import {MatFormFieldModule} from '@angular/material/form-field'; 
+import {MatSelectModule} from '@angular/material/select';
 const appRoutes: Routes = [
   {path: 'Login', component: LoginComponent},
   {path: 'Logout', canActivate:[AuthGuard], component:LogoutComponent},
@@ -75,6 +76,8 @@ const appRoutes: Routes = [
     HttpClientModule,
     FormsModule,
     MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule
    
   ],
   providers: [],

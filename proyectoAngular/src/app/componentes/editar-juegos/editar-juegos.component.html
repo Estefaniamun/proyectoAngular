@@ -1,6 +1,13 @@
 <div class="container">
     <form class="form item">
       <mat-form-field class="form__element">
+        <mat-label>Seleccionar id</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let j of juegos" name="id" [(ngModel)]="juego.id"  value="option">{{j.id}}</mat-option>
+        </mat-select>
+        <mat-hint align="end"></mat-hint>
+      </mat-form-field>
+      <mat-form-field class="form__element">
         <input
           matInput
           placeholder="nombre"

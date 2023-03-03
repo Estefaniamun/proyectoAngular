@@ -1,5 +1,5 @@
 export interface Juego {
-    id: number;
+    id: any;
     nombre: string;
     descripcion: string;
 }

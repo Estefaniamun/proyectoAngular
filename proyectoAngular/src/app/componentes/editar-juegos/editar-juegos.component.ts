@@ -1,7 +1,7 @@
 import { ListarJuegosService } from './../../servicios/listar-juegos.service';
 import { Component, OnInit, NgModule } from '@angular/core';
 import { Juego } from 'src/app/interfaces/juego';
-import { ActivatedRoute, Route } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
@@ -15,21 +15,22 @@ export class EditarJuegosComponent implements OnInit{
     nombre:"",
     descripcion:""
  };
+  id = this.route.snapshot.paramMap.get('id');
  
-  
-constructor( private actualizarjuego:ListarJuegosService ,private route: ActivatedRoute,){
+ juegos: Juego[]=[];
+ 
+constructor( private actualizarjuego:ListarJuegosService ,private route: ActivatedRoute,private listarjuegos: ListarJuegosService, private router: Router){
 }
 
 actualizarJuego(j: Juego) {
+this.juego.id = this.id;
   this.actualizarjuego.updateJuego(j).subscribe();
-  let id = this.route.snapshot.paramMap.get('id');
-
   
 }
 
 
 ngOnInit(): void {
-
+  this.listarjuegos.listarJuegos().subscribe(juego => { (this.juegos = juego); console.log(this.juegos) });
  }
 
 
