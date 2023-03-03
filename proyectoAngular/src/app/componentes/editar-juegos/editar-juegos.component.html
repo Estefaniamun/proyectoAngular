@@ -5,16 +5,16 @@
           matInput
           placeholder="nombre"
           name="nombre"
-         
+          [(ngModel)]="juego.nombre"
         />
       </mat-form-field>
       <mat-form-field class="form__element">
-        <label for="descripcion">Descripcion</label>
         <textarea
           matInput
           placeholder="descripcion"
           name="descripcion"
-          id="descripcion">
+          id="descripcion"
+          [(ngModel)]="juego.descripcion">
         </textarea>
       </mat-form-field>
       <button [disabled]="" mat-raised-button color="primary" type="submit" (click)="actualizarJuego(juego)" routerLink="/listarJuegos">Editar</button>

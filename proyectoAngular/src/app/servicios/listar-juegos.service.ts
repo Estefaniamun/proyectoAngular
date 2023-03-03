@@ -25,7 +25,7 @@ export class ListarJuegosService {
 
   updateJuego(juego: Juego): Observable<Juego> {
     const url = `${this.apiurl}/${juego.id}`;
-    return this.http.put<Juego>(url, juego);
+    return this.http.put<Juego>(url, juego, httpOptions);
   }
 
   borrarJuego(idjuego: number): Observable<Juego> {

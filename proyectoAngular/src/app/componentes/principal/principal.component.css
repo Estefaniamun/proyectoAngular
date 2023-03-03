@@ -6,6 +6,6 @@
 
 .imagen{
  width: 100%;
- min-height: calc(100vh - 50px - 100px);
+ max-height: calc(100vh - 50px - 100px);
 
 }
