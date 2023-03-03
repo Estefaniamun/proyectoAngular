@@ -31,6 +31,7 @@ import { LogoutComponent } from './componentes/logout/logout.component';
 import { AuthGuard } from './guards/auth.guard';
 import {MatFormFieldModule} from '@angular/material/form-field'; 
 import {MatSelectModule} from '@angular/material/select';
+import { ModalComponent } from './componentes/borrar-juegos/modal/modal.component';
 const appRoutes: Routes = [
   {path: 'Login', component: LoginComponent},
   {path: 'Logout', canActivate:[AuthGuard], component:LogoutComponent},
@@ -61,6 +62,7 @@ const appRoutes: Routes = [
     BorrarUsuariosComponent,
     LoginComponent,
     LogoutComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
