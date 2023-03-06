@@ -2,7 +2,6 @@ import { ListarJuegosService } from './../../servicios/listar-juegos.service';
 import { Component, OnInit, NgModule } from '@angular/core';
 import { Juego } from 'src/app/interfaces/juego';
 import { ActivatedRoute, Route, Router } from '@angular/router';
-import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-editar-juegos',

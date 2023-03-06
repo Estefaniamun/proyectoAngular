@@ -1,1 +1,13 @@
-<p>borrar-usuarios works!</p>
+<div class="container">
+    <form class="form item">
+      <mat-form-field class="form__element">
+        <mat-label>Seleccionar id</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let u of usuarios" name="id" [(ngModel)]="usuario.id"  value="option">{{u.id}}</mat-option>
+        </mat-select>
+        <mat-hint align="end"></mat-hint>
+      </mat-form-field>
+      
+      <button [disabled]="" mat-raised-button color="primary" type="submit" (click)="eliminarUsuario(usuario)" routerLink="/listarUsuarios">Borrar</button>
+    </form>
+  </div>

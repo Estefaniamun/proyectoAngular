@@ -1,11 +1,17 @@
-
-
-
-<div mat-dialog-content>
-¿Estás seguro de borrar este juego?
+<div class="container">
+  <form class="form item">
+    <mat-form-field class="form__element">
+      <mat-label>Seleccionar id</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let j of juegos" name="id" [(ngModel)]="juego.id"  value="option">{{j.id}}</mat-option>
+      </mat-select>
+      <mat-hint align="end"></mat-hint>
+    </mat-form-field>
+    
+    <button [disabled]="" mat-raised-button color="primary" type="submit" (click)="eliminarJuego(juego)" routerLink="/listarJuegos">Borrar</button>
+  </form>
 </div>
-<div mat-dialog-actions>
-  <button mat-button mat-dialog-close>No</button>
-  <button mat-button mat-dialog-close cdkFocusInitial>Ok</button>
-</div>
+
+
+
 

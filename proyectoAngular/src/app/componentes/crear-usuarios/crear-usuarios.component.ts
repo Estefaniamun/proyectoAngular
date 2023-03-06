@@ -11,6 +11,8 @@ import { Usuario } from 'src/app/interfaces/usuario';
 export class CrearUsuariosComponent {
   model = {
     id:'',
+    usuario:'',
+    password:'',
     nombre:'',
     apellidos:'',
     direccion:'',

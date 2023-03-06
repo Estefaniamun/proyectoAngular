@@ -1,9 +1,10 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Juego } from '../interfaces/juego';
 import { Usuario } from '../interfaces/usuario';
-
+const httpOptions={
+  headers:new HttpHeaders({'Content-Type':'application/json',}),
+ };
 @Injectable({
   providedIn: 'root'
 })
@@ -26,5 +27,13 @@ export class ListarUsuariosService {
     return this.http.post<any>(`${this.apiurl}`, usuario);
   }
 
-  
+  updateUsuario(usuario: Usuario): Observable<Usuario> {
+    const url = `${this.apiurl}/${usuario.id}`;
+    return this.http.put<Usuario>(url, usuario, httpOptions);
+  }
+
+  borrarUsuario(idUsuario: any): Observable<Usuario> {
+    const url = `${this.apiurl}/${idUsuario}`;
+    return this.http.delete<Usuario>(url);
+  }
 }

@@ -17,8 +17,8 @@
       </p>
     </mat-card-content>
       <mat-card-actions>
-        <button mat-raised-button>Editar</button>
-        <button mat-raised-button>Borrar</button>
+        <button mat-raised-button [routerLink]="['/editarUsuarios', u.id]">Editar</button>
+        <button mat-raised-button [routerLink]="['/borrarUsuarios', u.id]">Borrar</button>
       </mat-card-actions>
     </mat-card>
     <br>

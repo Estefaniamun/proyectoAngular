@@ -39,9 +39,11 @@
     {
       "id": "5",
       "nombre": "prueba",
-      "apellidos": "prueba",
+      "usuario": "prueba@gmail.com",
+      "password": "prueba",
+      "apellidos": "prueba prueba",
       "direccion": "prueba",
-      "rol": "usuario"
+      "rol": "admin"
     }
   ],
   "juegos": [
@@ -74,11 +76,6 @@
       "id": 6,
       "nombre": "The Last Of Us",
       "descripcion": "es un videojuego de terror, acción y aventura desarrollado por la compañía estadounidense Naughty Dog y distribuido por Sony Computer Entertainment para la consola PlayStation 3 en 2013. La trama describe las vivencias de Joel y Ellie, un par de supervivientes de una pandemia en Estados Unidos que provoca la mutación de los seres humanos en criaturas caníbales."
-    },
-    {
-      "id": "7",
-      "nombre": "prueba",
-      "descripcion": "prueba"
     }
   ]
 }

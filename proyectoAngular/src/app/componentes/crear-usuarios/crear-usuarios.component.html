@@ -18,7 +18,24 @@
           #nombre="ngModel"
         />
     </mat-form-field>
-        <mat-error *ngIf="nombre.valid"> Nombre es requerido </mat-error>
+    <mat-form-field class="form__element">
+      <input
+        matInput
+        placeholder="email"
+        [(ngModel)]="model.usuario"
+        name="usuario"
+        #usuario="ngModel"
+      />
+  </mat-form-field>
+  <mat-form-field class="form__element">
+    <input
+      matInput
+      placeholder="password"
+      [(ngModel)]="model.password"
+      name="password"
+      #password="ngModel"
+    />
+</mat-form-field>
         <mat-form-field class="form__element">
             <input
               matInput

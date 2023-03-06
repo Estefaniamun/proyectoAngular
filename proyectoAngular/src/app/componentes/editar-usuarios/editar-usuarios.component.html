@@ -1,1 +1,62 @@
-<p>editar-usuarios works!</p>
+<div class="container">
+    <form class="form item">
+      <mat-form-field class="form__element">
+        <mat-label>Seleccionar id</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let u of usuarios" name="id" [(ngModel)]="usuario.id"  value="option">{{u.id}}</mat-option>
+        </mat-select>
+        <mat-hint align="end"></mat-hint>
+      </mat-form-field>
+      <mat-form-field class="form__element">
+        <input
+          matInput
+          placeholder="nombre"
+          name="nombre"
+          [(ngModel)]="usuario.nombre"
+        />
+      </mat-form-field>
+      <mat-form-field class="form__element">
+        <input
+          matInput
+          placeholder="email"
+          name="usuario"
+          [(ngModel)]="usuario.usuario"
+        />
+      </mat-form-field>
+      <mat-form-field class="form__element">
+        <input
+          matInput
+          placeholder="password"
+          name="password"
+          [(ngModel)]="usuario.password"
+        />
+      </mat-form-field>
+      <mat-form-field class="form__element">
+        <input
+          matInput
+          placeholder="apellidos"
+          name="apellidos"
+          [(ngModel)]="usuario.apellidos"
+        />
+      </mat-form-field>
+      <mat-form-field class="form__element">
+        <textarea
+          matInput
+          placeholder="direccion"
+          name="direccion"
+          id="direccion"
+          [(ngModel)]="usuario.direccion">
+        </textarea>
+      </mat-form-field>
+      <mat-form-field class="form__element">
+        <input
+          matInput
+          placeholder="Tipos de rol (admin o usuario)"
+          name="rol"
+          [(ngModel)]="usuario.rol"
+        />
+      </mat-form-field>
+      <button [disabled]="" mat-raised-button color="primary" type="submit" (click)="actualizarUsuario(usuario)" routerLink="/listarUsuarios">Editar</button>
+    </form>
+  </div>
+
