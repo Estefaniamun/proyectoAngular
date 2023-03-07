@@ -1,37 +1,45 @@
-import { ListarUsuariosService } from './../../servicios/listar-usuarios.service';
+import { AuthService } from './../../servicios/auth.service';
+import { ListarUsuariosService } from 'src/app/servicios/listar-usuarios.service';
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { first } from 'rxjs';
-import { Router } from '@angular/router';
+import { Usuario } from 'src/app/interfaces/usuario';
+
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit{
-  private router: Router;
-  private auth: ListarUsuariosService;
-
-  constructor(protected routerp: Router, authp:ListarUsuariosService){
-    this.router=routerp;
-    this.auth=authp;
-  }
-
-  login (form:NgForm){
-    const usuario=form.value.usuario;
-    const password=form.value.password; 
-    this.auth.login(usuario,password).pipe(first()).subscribe((respuesta: any) =>{
-      console.log(respuesta);
-      if (respuesta){
-        localStorage.setItem('token',respuesta);
-        this.router.navigate(['/Home']);
+export class LoginComponent implements OnInit {
+  usuario:Usuario[]=[];
+  constructor(private usuariosService: AuthServiceService) { }
+  private login(): void {
+    this.usuariosService.login().subscribe({
+    (data)=> {
+      for(let i = 0; i<data.length; i++){
+      if (data[i].usuario == this.usuario.usuario && data[i].password == this.usuario.password) {
+        this.logueado() = data[i];
+        localStorage.setItem('logueado', '1');
+        console.log(data[i]);
       }
-      
-    })
+    }
   }
+},
+(error) => {
+  this.error = error;
+}.add(async () => {
+  await this.router.navigate(['/principal']);
+  location.reload();
+} {
 
-  ngOnInit(): void {
+}));
+};
 
-  }
+onSubmit(){
+  this.usuario.usuario = this.email.value;
+  this.usuario.password = this.profileForm.controls.value;
+  this.login();
+}
+
+
+
 }

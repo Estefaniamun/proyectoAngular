@@ -13,11 +13,6 @@ export class ListarUsuariosService {
   constructor(private http:HttpClient) { }
 
 
-  login(iduser: string, password:string): Observable<Usuario> {
-    return this.http.get<Usuario>(`${this.apiurl}/${iduser}`);
-  } 
-  
-  
   
   listarUsuarios(): Observable<Usuario[]>{
     return this.http.get<Usuario[]>(this.apiurl);

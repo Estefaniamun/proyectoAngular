@@ -28,12 +28,11 @@ import { EditarUsuariosComponent } from './componentes/editar-usuarios/editar-us
 import { BorrarUsuariosComponent } from './componentes/borrar-usuarios/borrar-usuarios.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { LogoutComponent } from './componentes/logout/logout.component';
-import { AuthGuard } from './guards/auth.guard';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 const appRoutes: Routes = [
   { path: 'Login', component: LoginComponent },
-  { path: 'Logout', canActivate: [AuthGuard], component: LogoutComponent },
+  { path: 'Logout',  component: LogoutComponent },
   { path: 'listarUsuarios', component: ListarUsuariosComponent },
   { path: 'crearUsuarios', component: CrearUsuariosComponent },
   { path: 'editarUsuarios/:id', component: EditarUsuariosComponent },
